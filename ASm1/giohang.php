@@ -1,0 +1,100 @@
+<?php
+
+?>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giohang</title>
+    <link rel="stylesheet" href="../ASm1/css/cart.css"> 
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="" class="logo">
+                <img src="../ASm1/img/logo.png" alt=""width ='120px'height='80px'>
+            </a>
+            <div id="menu">
+                <div class="item">
+                    <a href="../ASm1/trangchu.php">Trang chủ</a>
+                </div>
+                <div class="item">
+                    <a href="../ASm1/sanpham.php">Sản phẩm</a>
+                </div>
+                <div class="item">
+                    <a href="">Blog</a>
+                </div>
+                <div class="item">
+                    <a href="">Liên hệ</a>
+                </div>
+            </div>
+            <div class="header__seach">
+                <form action="">
+                    <input type="text" placeholder="Tìm kiếm" />
+                    <button class="btn-search btn btn-primary" type="submit">
+                        <i class="fa-solid fa-magnifying-glass">Tìm kiếm</i>
+                    </button>
+                </form>
+            </div>
+            <div id="actions">
+            <div class="item">
+                    <img src="../ASm1/img/user.png" alt="">
+                    <a class="dropdown-item" href="../ASm1/dangky.php" style="color: black;">Đăng kí</a> |
+                    <a class="dropdown-item" href="../ASm1/dangnhap.php" style="color: black;">Đăng nhập</a>
+                    
+                </div>
+                <div class="item">
+                    <img src="../ASm1/img/cart.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+<div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+                            <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="../ASm1/img/product_4.png" width="100" height="100">
+                                <span class="cart-item-title">Hamburger Bò</span>
+                            </div>
+                            <span class="cart-price cart-column">50000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="1">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div>
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="../ASm1/img/product_1.png" width="100" height="100">
+                                <span class="cart-item-title">Bít Tết Gà</span>
+                            </div>
+                            <span class="cart-price cart-column">199000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="2">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">3000VNĐ</span>
+                            <button type='submit'><strong class="cart-total-title">Đặt Hàng</strong></button>
+                        </div>
+                    </div>
+    </div>
+    <script>// xóa cart
+        var remove_cart = document.getElementsByClassName("btn-danger");
+        for (var i = 0; i < remove_cart.length; i++) {
+          var button = remove_cart[i]
+          button.addEventListener("click", function () {
+            var button_remove = event.target
+            button_remove.parentElement.parentElement.remove()
+          })
+        }</script>
+</body>
+</html>
